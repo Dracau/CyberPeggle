@@ -8,7 +8,7 @@ public class Portal : MonoBehaviour
     [SerializeField] private PortalManager portalManager;
     [SerializeField] private Transform outputPosition;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         //if player
         if(!portalManager.TryWarp(other.gameObject)) return;
