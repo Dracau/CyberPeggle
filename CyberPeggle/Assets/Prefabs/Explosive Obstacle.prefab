@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7805296972527461886, guid: ff4fd8459ffee7c488649a51bdc494cd, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9147190836306676265, guid: ff4fd8459ffee7c488649a51bdc494cd, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -75,20 +79,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1208638955775204848, guid: ff4fd8459ffee7c488649a51bdc494cd, type: 3}
   m_PrefabInstance: {fileID: 4038291037503500110}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2509468317094370790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2940594334000755390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 169e917856fb2de4a90f8bba921336cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionTrigger: {fileID: 2836338480514437579}
-  explosionForce: 1
 --- !u!58 &2836338480514437579
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -105,3 +95,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &2509468317094370790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940594334000755390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 169e917856fb2de4a90f8bba921336cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionTrigger: {fileID: 2836338480514437579}
+  explosionForce: 1

@@ -292,10 +292,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Obstacle
       objectReference: {fileID: 0}
-    - target: {fileID: 6078479006479698608, guid: 0c1e1f68733c5634cae5b0e70cb72652, type: 3}
-      propertyPath: m_SleepingMode
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1e1f68733c5634cae5b0e70cb72652, type: 3}
 --- !u!1 &971532154

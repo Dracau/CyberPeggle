@@ -29,6 +29,7 @@ public class ExplosiveObstacle : Obstacle
     {
         if(other.GetComponent<Obstacle>() != default)
         {
+            Debug.Log(0);
             obstaclesInRange.Add(other.GetComponent<Obstacle>());
         }
     }
