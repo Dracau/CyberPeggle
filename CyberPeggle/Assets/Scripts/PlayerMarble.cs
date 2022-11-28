@@ -36,4 +36,9 @@ public class PlayerMarble : MonoBehaviour
             Initialize();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        col.gameObject.GetComponent<Obstacle>()?.Hit();
+    }
 }
