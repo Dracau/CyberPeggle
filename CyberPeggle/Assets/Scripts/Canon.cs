@@ -37,5 +37,6 @@ public class Canon : MonoBehaviour
         Vector2 mousePosition = input.actions["Aim"].ReadValue<Vector2>();
         Vector2 mouseRelativePosition = mousePosition - relativePosition;
         return mouseRelativePosition.normalized;
+        
     }
 }
