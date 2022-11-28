@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147190836306676265, guid: ff4fd8459ffee7c488649a51bdc494cd, type: 3}
       propertyPath: m_Color.g
-      value: 0.08880368
+      value: 0.95084643
       objectReference: {fileID: 0}
     - target: {fileID: 9147190836306676265, guid: ff4fd8459ffee7c488649a51bdc494cd, type: 3}
       propertyPath: m_Color.r
@@ -107,5 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 169e917856fb2de4a90f8bba921336cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBeforeDisappearing: 0
   explosionTrigger: {fileID: 2836338480514437579}
   explosionForce: 1

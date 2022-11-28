@@ -10,7 +10,6 @@ public class Obstacle : MonoBehaviour
     {
         if(hitted) return;
         hitted = true;
-        Debug.Log(gameObject.name + " was hit");
         StartCoroutine(Disappear());
     }
 
