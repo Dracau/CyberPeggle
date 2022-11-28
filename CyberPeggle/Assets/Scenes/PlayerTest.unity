@@ -3001,6 +3001,10 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1542954309}
+    - target: {fileID: 95035091069709259, guid: 2b71eadfba47fed4db54b430180e63c3, type: 3}
+      propertyPath: propulsionStrength
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 95035091069709260, guid: 2b71eadfba47fed4db54b430180e63c3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4530,7 +4534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7934553809023680189, guid: e81cf08351b27eb4291bcaf2036c42a9, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Propulse
+      value: LaunchMarble
       objectReference: {fileID: 0}
     - target: {fileID: 7934553809023680189, guid: e81cf08351b27eb4291bcaf2036c42a9, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4544,6 +4548,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1542954308}
+    - target: {fileID: 7934553809023680190, guid: e81cf08351b27eb4291bcaf2036c42a9, type: 3}
+      propertyPath: maxAngle
+      value: 76.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7934553809023680190, guid: e81cf08351b27eb4291bcaf2036c42a9, type: 3}
       propertyPath: <MarblePosition>k__BackingField
       value: 

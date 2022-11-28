@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,29 +15,35 @@ public class Canon : MonoBehaviour
 
     private void Awake()
     {
-        relativePosition = Camera.main.WorldToScreenPoint(transform.position);
+        relativePosition = Camera.main!.WorldToScreenPoint(transform.position);
     }
 
     private void Update()
     {
-        Vector2 mouseDirection = GetMouseDirection();
-        float angle = -Mathf.Atan2(mouseDirection.x, mouseDirection.y) * Mathf.Rad2Deg;
-        angle -= 180;
-        //angle = Mathf.Clamp(angle, -maxAngle, maxAngle);
-
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        Aim();
     }
 
-    public void Propulse(InputAction.CallbackContext context)
+    private void Aim()
     {
-        player.Propulse(GetMouseDirection());
+        // Canon aims at mouse position
+        Vector2 directionToLookAt = -GetMouseDirection();
+        float angle = -Mathf.Atan2(directionToLookAt.x, directionToLookAt.y) * Mathf.Rad2Deg;
+        angle = Mathf.Clamp(angle, -maxAngle, maxAngle);
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private Vector2 GetMouseDirection()
     {
+        // Return the current direction of the mouse, relative to the canon
         Vector2 mousePosition = input.actions["Aim"].ReadValue<Vector2>();
         Vector2 mouseRelativePosition = mousePosition - relativePosition;
         return mouseRelativePosition.normalized;
-        
+    }
+    
+    public void LaunchMarble(InputAction.CallbackContext context)
+    {
+        // Launch player marble when left mouse button is pressed
+        if (!context.started) return;
+        player.Launch(GetMouseDirection());
     }
 }

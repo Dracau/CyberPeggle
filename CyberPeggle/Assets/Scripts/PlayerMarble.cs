@@ -21,7 +21,7 @@ public class PlayerMarble : MonoBehaviour
         transform.localPosition = Vector2.zero;
     }
     
-    public void Propulse(Vector2 direction)
+    public void Launch(Vector2 direction)
     {
         transform.parent = null;
         rb.simulated = true;
