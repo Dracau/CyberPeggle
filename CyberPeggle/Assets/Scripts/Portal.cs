@@ -10,7 +10,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //if player
+        if(other.GetComponent<PlayerMarble>() == default) return;
         if(!portalManager.TryWarp(other.gameObject)) return;
         
         other.transform.position = outputPosition.position;
