@@ -21,24 +21,17 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        StartGame();
-    }
-
-    private void StartGame()
-    {
-        PickableMarble.PickableMarbles = new List<PickableMarble>();
     }
 
     public void Victory()
     {
-        
+        MenuManager.instance.VictoryPanel.SetActive(true);
         StartCoroutine(ReloadScene());
     }
 
     public void Defeat()
     {
-        
+        MenuManager.instance.DefeatPanel.SetActive(true);
         StartCoroutine(ReloadScene());
     }
 
