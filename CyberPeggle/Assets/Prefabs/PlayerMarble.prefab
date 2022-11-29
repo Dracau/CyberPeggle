@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 95035091069709256}
   - component: {fileID: 95035091069709257}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerMarble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27b00908a48eb7458198aee8dc642f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propulsionStrength: 1
-  rb: {fileID: 0}
+  rb: {fileID: 95035091069709257}
+  lifeText: {fileID: 0}
+  IsInsideCanon: 0
 --- !u!58 &95035091069709256
 CircleCollider2D:
   m_ObjectHideFlags: 0

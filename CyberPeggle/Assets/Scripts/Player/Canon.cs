@@ -7,13 +7,12 @@ using UnityEngine.InputSystem;
 
 public class Canon : MonoBehaviour
 {
-    [Range(0f, 90f)] [SerializeField] private float maxAngle = 90;
+    [SerializeField] private CanonData_SO canonData = null;
     [field : SerializeField] public Transform MarblePosition { get; private set; } = null;
     [SerializeField] private PlayerInput input = null;
-    [SerializeField] private PlayerMarble player = null;
     private Vector2 relativePosition;
 
-    private void Awake()
+    public void Initialize()
     {
         relativePosition = Camera.main!.WorldToScreenPoint(transform.position);
     }
@@ -28,6 +27,7 @@ public class Canon : MonoBehaviour
         // Canon aims at mouse position
         Vector2 directionToLookAt = -GetMouseDirection();
         float angle = -Mathf.Atan2(directionToLookAt.x, directionToLookAt.y) * Mathf.Rad2Deg;
+        float maxAngle = canonData.MaxAngle;
         angle = Mathf.Clamp(angle, -maxAngle, maxAngle);
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
@@ -44,6 +44,11 @@ public class Canon : MonoBehaviour
     {
         // Launch player marble when left mouse button is pressed
         if (!context.started) return;
-        player.Launch(GetMouseDirection());
+        PlayerMarble player = GameManager.Instance.LevelManager.Player;
+        if (player.IsInsideCanon == true)
+        {
+            Vector2 force = GetMouseDirection() * canonData.PropulsionStrength;
+            player.Launch(force);
+        }
     }
 }
