@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c137e9e8-e1b5-40c3-9d18-6a0a61f1a640" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CyberPeggle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CyberPeggle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Canon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Canon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="c137e9e8-e1b5-40c3-9d18-6a0a61f1a640" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
