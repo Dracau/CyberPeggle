@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c137e9e8-e1b5-40c3-9d18-6a0a61f1a640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CyberPeggle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CyberPeggle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gautier.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Obstacles/ExplosiveObstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacles/ExplosiveObstacle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMarble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMarble.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Eater.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Eater.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/EaterFlipper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ObstacleDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/Eater.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669639880406</updated>
       <workItem from="1669639885188" duration="9180000" />
-      <workItem from="1669715007634" duration="3270000" />
+      <workItem from="1669715007634" duration="4116000" />
     </task>
     <servers />
   </component>
