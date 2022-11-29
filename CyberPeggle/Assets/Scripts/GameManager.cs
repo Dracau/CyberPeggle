@@ -21,6 +21,13 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        StartGame();
+    }
+
+    private void StartGame()
+    {
+        PickableMarble.PickableMarbles = new List<PickableMarble>();
     }
 
     public void Victory()
