@@ -17,8 +17,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+<<<<<<< HEAD
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bucket.cs" root0="FORCE_HIGHLIGHTING" />
+=======
     <setting file="file://$PROJECT_DIR$/Assets/Editor/EaterFlipper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ObstacleDebugger.cs" root0="FORCE_HIGHLIGHTING" />
+>>>>>>> main
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/Eater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacles/EatingPart.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,8 +91,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669639880406</updated>
+<<<<<<< HEAD
+      <workItem from="1669639885188" duration="11704000" />
+      <workItem from="1669713729480" duration="10993000" />
+=======
       <workItem from="1669639885188" duration="9180000" />
       <workItem from="1669715007634" duration="4416000" />
+>>>>>>> main
     </task>
     <servers />
   </component>

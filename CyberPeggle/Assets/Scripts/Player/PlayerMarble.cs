@@ -68,6 +68,10 @@ public class PlayerMarble : MonoBehaviour
         {
             HitGround();
         }
+        else if (col.gameObject.CompareTag("Bucket"))
+        {
+            EnterBucket();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
