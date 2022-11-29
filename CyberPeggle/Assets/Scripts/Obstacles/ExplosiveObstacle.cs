@@ -15,7 +15,6 @@ public class ExplosiveObstacle : Obstacle
     private List<Obstacle> obstaclesInRange = new List<Obstacle>();
     private IEnumerator ExplosionCoroutine()
     {
-        Debug.Log(2);
         explosionTrigger.enabled = true;
         yield return new WaitForSeconds(0.1f);
         foreach (Obstacle obstacle in obstaclesInRange)
@@ -30,7 +29,6 @@ public class ExplosiveObstacle : Obstacle
     {
         if(other.GetComponent<Obstacle>() != default)
         {
-            Debug.Log(0);
             obstaclesInRange.Add(other.GetComponent<Obstacle>());
         }
     }

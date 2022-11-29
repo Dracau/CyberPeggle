@@ -19,6 +19,8 @@ public class PlayerMarble : MonoBehaviour
         rb.velocity = Vector2.zero;
         transform.SetParent(GameManager.Instance.Canon.MarblePosition);
         transform.localPosition = Vector2.zero;
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+        rb.constraints = RigidbodyConstraints2D.None;
     }
     
     public void Propulse(Vector2 direction)
