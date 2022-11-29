@@ -32,13 +32,20 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
-        print("victory");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        StartCoroutine(ReloadScene());
     }
 
     public void Defeat()
     {
-        print("defeat");
+        
+        StartCoroutine(ReloadScene());
+    }
+
+    private IEnumerator ReloadScene()
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1.2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
