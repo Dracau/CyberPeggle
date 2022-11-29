@@ -109,4 +109,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBeforeDisappearing: 0
   explosionTrigger: {fileID: 2836338480514437579}
-  explosionForce: 1
+  explosionForce: 3.5

@@ -30,6 +30,8 @@ public class ExplosiveObstacle : Obstacle
         if(other.GetComponent<Obstacle>() != default)
         {
             obstaclesInRange.Add(other.GetComponent<Obstacle>());
+            return;
         }
+        if(other.GetComponent<PlayerMarble>() != default) other.GetComponent<Rigidbody2D>().AddForce((other.transform.position - transform.position).normalized * explosionForce, ForceMode2D.Impulse);
     }
 }
