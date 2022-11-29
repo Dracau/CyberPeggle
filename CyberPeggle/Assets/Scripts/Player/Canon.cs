@@ -25,6 +25,7 @@ public class Canon : MonoBehaviour
     private void Aim()
     {
         // Canon aims at mouse position
+        if(MenuManager.instance.paused) return;
         Vector2 directionToLookAt = -GetMouseDirection();
         float angle = -Mathf.Atan2(directionToLookAt.x, directionToLookAt.y) * Mathf.Rad2Deg;
         float maxAngle = canonData.MaxAngle;
@@ -43,6 +44,7 @@ public class Canon : MonoBehaviour
     public void LaunchMarble(InputAction.CallbackContext context)
     {
         // Launch player marble when left mouse button is pressed
+        if(MenuManager.instance.paused) return;
         if (!context.started) return;
         PlayerMarble player = GameManager.Instance.LevelManager.Player;
         if (player.IsInsideCanon == true)

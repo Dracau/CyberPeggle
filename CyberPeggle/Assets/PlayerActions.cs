@@ -44,6 +44,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu Toggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""bf2411e1-5a3d-49d0-9c14-722cd2bbcd3a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Propulse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92550d7a-1e2f-481b-8b87-3f2007298862"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Menu Toggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -81,6 +101,11 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
                 }
             ]
         }
@@ -90,6 +115,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_PlayerActions = asset.FindActionMap("PlayerActions", throwIfNotFound: true);
         m_PlayerActions_Aim = m_PlayerActions.FindAction("Aim", throwIfNotFound: true);
         m_PlayerActions_Propulse = m_PlayerActions.FindAction("Propulse", throwIfNotFound: true);
+        m_PlayerActions_MenuToggle = m_PlayerActions.FindAction("Menu Toggle", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,12 +177,14 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private IPlayerActionsActions m_PlayerActionsActionsCallbackInterface;
     private readonly InputAction m_PlayerActions_Aim;
     private readonly InputAction m_PlayerActions_Propulse;
+    private readonly InputAction m_PlayerActions_MenuToggle;
     public struct PlayerActionsActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActionsActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Aim => m_Wrapper.m_PlayerActions_Aim;
         public InputAction @Propulse => m_Wrapper.m_PlayerActions_Propulse;
+        public InputAction @MenuToggle => m_Wrapper.m_PlayerActions_MenuToggle;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -172,6 +200,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Propulse.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPropulse;
                 @Propulse.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPropulse;
                 @Propulse.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnPropulse;
+                @MenuToggle.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnMenuToggle;
+                @MenuToggle.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnMenuToggle;
+                @MenuToggle.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnMenuToggle;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -182,6 +213,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Propulse.started += instance.OnPropulse;
                 @Propulse.performed += instance.OnPropulse;
                 @Propulse.canceled += instance.OnPropulse;
+                @MenuToggle.started += instance.OnMenuToggle;
+                @MenuToggle.performed += instance.OnMenuToggle;
+                @MenuToggle.canceled += instance.OnMenuToggle;
             }
         }
     }
@@ -199,5 +233,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     {
         void OnAim(InputAction.CallbackContext context);
         void OnPropulse(InputAction.CallbackContext context);
+        void OnMenuToggle(InputAction.CallbackContext context);
     }
 }
