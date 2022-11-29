@@ -200,6 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68dd5a3f564118e409760ff53d183c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marblePosition: {fileID: 7934553807650849831}
+  canonData: {fileID: 11400000, guid: b75e326d9d4722c4f96229f4253c0616, type: 2}
+  <MarblePosition>k__BackingField: {fileID: 7934553807650849831}
   input: {fileID: 7934553809023680189}
-  player: {fileID: 0}
