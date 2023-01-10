@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
     [SerializeField] private GameObject menu;
-    public bool paused;
+    [SerializeField] private Slider slider;
+    [Dracau.ReadOnly] public bool paused;
 
     private void Awake()
     {
@@ -27,5 +29,15 @@ public class MenuManager : MonoBehaviour
         menu.SetActive(paused);
         Time.timeScale = paused ? 0 : 1;
     }
-    
+
+    public void UpdateVolume()
+    {
+        //send slider.value to audio manager
+    }
+
+    public void Quit()
+    {
+        // A remplacer par le retour à la world map
+        Application.Quit();
+    }
 }
