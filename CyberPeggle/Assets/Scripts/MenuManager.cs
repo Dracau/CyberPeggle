@@ -4,18 +4,30 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
-    [SerializeField] private GameObject menu;
-    [SerializeField] private Slider slider;
+    [SerializeField] private UIDocument uiDocument;
+    //[SerializeField] private GameObject menu;
     [Dracau.ReadOnly] public bool paused;
+
+    private Button resumeButton, quitButton;
+    private VisualElement volumeSlider;
 
     private void Awake()
     {
         instance = this;
+        resumeButton = uiDocument.rootVisualElement.Q<Button>("ResumeButton");
+        quitButton = uiDocument.rootVisualElement.Q<Button>("QuitButton");
+        volumeSlider = uiDocument.rootVisualElement.Q<Slider>("VolumeSlider");
+        
+        resumeButton.clicked += TogglePause;
+        quitButton.clicked += Quit;
+        volumeSlider.RegisterCallback<ChangeEvent<float>>(UpdateVolume);
+        
+        uiDocument.rootVisualElement.style.display = DisplayStyle.None;
     }
 
     public void ReadPauseInput(InputAction.CallbackContext context)
@@ -23,20 +35,23 @@ public class MenuManager : MonoBehaviour
         if (!context.performed) return;
         TogglePause();
     }
-    public void TogglePause()
+    private void TogglePause()
     {
+        Debug.Log(0);
         paused = !paused;
-        menu.SetActive(paused);
         Time.timeScale = paused ? 0 : 1;
+        uiDocument.rootVisualElement.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
     }
 
-    public void UpdateVolume()
+    public void UpdateVolume(ChangeEvent<float> evt)
     {
-        //send slider.value to audio manager
+        AudioListener.volume = evt.newValue;
+        Debug.Log("Volume: " + evt.newValue);
     }
 
     public void Quit()
     {
+        Debug.Log(1);
         // A remplacer par le retour à la world map
         Application.Quit();
     }
