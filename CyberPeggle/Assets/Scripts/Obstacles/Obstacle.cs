@@ -17,6 +17,7 @@ public class Obstacle : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.black;
         yield return new WaitForSeconds(timeBeforeDisappearing);
+        transform.parent.GetComponent<ObstaclesManager>().CheckWin();
         Destroy(gameObject);
     }
 }
