@@ -21,13 +21,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 19
 =======
   controlID: 79
+>>>>>>> Toinon
+=======
+  controlID: 17374
 >>>>>>> Toinon
 --- !u!114 &2
 MonoBehaviour:
@@ -49,16 +53,18 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
-    y: 73
+    x: 365
+    y: 81
     width: 1101
     height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - C:\Users\t.robaux\Desktop\CyberPeggle\CyberPeggle\Library\PlayModeViewStates\f798cb3bc0fa7f443b0938af8c35a598
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -159,13 +165,17 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 947
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 20
 =======
   controlID: 80
+>>>>>>> Toinon
+=======
+  controlID: 17375
 >>>>>>> Toinon
 --- !u!114 &4
 MonoBehaviour:
@@ -188,13 +198,17 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 561
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   controlID: 21
 =======
   controlID: 81
+>>>>>>> Toinon
+=======
+  controlID: 17376
 >>>>>>> Toinon
 --- !u!114 &5
 MonoBehaviour:
@@ -215,8 +229,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 561
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -242,8 +256,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 73
+    x: 2
+    y: 81
     width: 362
     height: 540
   m_ViewDataDictionary: {fileID: 0}
@@ -260,7 +274,11 @@ MonoBehaviour:
 =======
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 80aaffff16abffff8eafffff
+>>>>>>> Toinon
+=======
+      m_ExpandedIDs: 320afdffd40cfdff28e1fefffefaffffa86c0000
 >>>>>>> Toinon
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -308,8 +326,8 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 561
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -336,8 +354,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
-    y: 73
+    x: 365
+    y: 81
     width: 1101
     height: 540
   m_ViewDataDictionary: {fileID: 0}
@@ -554,7 +572,7 @@ MonoBehaviour:
       index: 10
       layout: 4
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -564,6 +582,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.6416113, y: -0.39358145, z: -0.010790034}
     speed: 2
     m_Value: {x: -0.602402, y: -0.3650383, z: -0.010017869}
@@ -571,6 +590,11 @@ MonoBehaviour:
     m_Target: {x: 476.88657, y: 348.87134, z: -5.117449}
     speed: 2
     m_Value: {x: 476.88657, y: 348.87134, z: -5.117449}
+>>>>>>> Toinon
+=======
+    m_Target: {x: 1.45, y: -0.45, z: 0}
+    speed: 2
+    m_Value: {x: 1.45, y: -0.45, z: 0}
 >>>>>>> Toinon
   m_RenderMode: 0
   m_CameraMode:
@@ -623,6 +647,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 1.7931436
     speed: 2
     m_Value: 1.7159269
@@ -630,6 +655,11 @@ MonoBehaviour:
     m_Target: 399.47226
     speed: 2
     m_Value: 399.47226
+>>>>>>> Toinon
+=======
+    m_Target: 10
+    speed: 2
+    m_Value: 10
 >>>>>>> Toinon
   m_Ortho:
     m_Target: 1
@@ -674,8 +704,8 @@ MonoBehaviour:
     y: 561
     width: 1466
     height: 386
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -702,8 +732,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 634
+    x: 2
+    y: 642
     width: 1465
     height: 365
   m_ViewDataDictionary: {fileID: 0}
@@ -724,9 +754,13 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
 =======
     - Assets
+>>>>>>> Toinon
+=======
+    - Assets/Assets/Images
 >>>>>>> Toinon
     m_Globs: []
     m_OriginalText: 
@@ -734,11 +768,15 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projets Unity\CyberPeggle\CyberPeggle
 =======
   - Assets
+=======
+  - Assets/Assets/Images
+>>>>>>> Toinon
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\t.robaux\Desktop\CyberPeggle\CyberPeggle
 >>>>>>> Toinon
@@ -747,6 +785,7 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: d0c60000
     m_LastClickedID: 50896
     m_ExpandedIDs: 00000000cec6000000ca9a3b
@@ -754,6 +793,11 @@ MonoBehaviour:
     m_SelectedIDs: cac60000
     m_LastClickedID: 50890
     m_ExpandedIDs: 00000000cac6000000ca9a3b
+>>>>>>> Toinon
+=======
+    m_SelectedIDs: e08c0000
+    m_LastClickedID: 36064
+    m_ExpandedIDs: 00000000f66d00006c6f0000a26f0000a46f0000a66f0000827c0000a48700004a8d0000be8d000000ca9a3b
 >>>>>>> Toinon
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -770,7 +814,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 9}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -782,7 +826,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000f66d00006c6f0000a26f0000a46f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -808,6 +852,7 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 3cacffff
     m_LastClickedInstanceID: -21444
     m_HadKeyboardFocusLastEvent: 1
@@ -817,6 +862,12 @@ MonoBehaviour:
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
+>>>>>>> Toinon
+=======
+    m_SelectedInstanceIDs: 9ca3fcff
+    m_LastClickedInstanceID: -220260
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300003ce400007e6d00000000000052730000f8750000869b0000
 >>>>>>> Toinon
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -865,10 +916,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2249
-    y: 726.5
-    width: 920
-    height: 250
+    x: 2
+    y: 642
+    width: 1465
+    height: 365
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -919,8 +970,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1466
-    y: 73
+    x: 1468
+    y: 81
     width: 453
     height: 926
   m_ViewDataDictionary: {fileID: 0}
@@ -933,7 +984,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -220260
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
