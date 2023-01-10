@@ -36,6 +36,7 @@ public class PlayerMarble : MonoBehaviour
         transform.parent = null;
         rb.simulated = true;
         IsInsideCanon = false;
+        rb.constraints = RigidbodyConstraints2D.None;
         rb.AddForce(force, ForceMode2D.Impulse);
         AddLife(-1);
     }
