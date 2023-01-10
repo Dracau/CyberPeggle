@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Styles/defaultButton.uss?fileID=7433441132597879392&amp;guid=96c4bf5e88f41bd42bd4bb7c3cb95bac&amp;type=3#defaultButton" />
+    <ui:VisualElement style="width: 100%; height: 100%; justify-content: center; align-items: center;">
+        <ui:VisualElement name="Background" style="width: 100%; height: 100%; position: absolute; background-color: rgb(118, 118, 118);" />
+        <ui:Label text="CyberPeggle" display-tooltip-when-elided="true" name="Title" style="justify-content: center; align-items: center; -unity-text-align: upper-center; font-size: 120%;" />
+        <ui:VisualElement style="width: 100%; height: 40%;">
+            <ui:VisualElement />
+        </ui:VisualElement>
+        <ui:Button text="Button" display-tooltip-when-elided="true" class="defaultButton" />
+    </ui:VisualElement>
+</ui:UXML>
