@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
     [HideInInspector] public LevelManager LevelManager = null;
+    public int LevelIndex = 1;
     
     private void Awake()
     {

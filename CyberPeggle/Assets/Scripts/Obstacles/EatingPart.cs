@@ -14,7 +14,7 @@ public class EatingPart : MonoBehaviour
         crunchedObject = col.gameObject;
         col.transform.parent = lockPoint;
         col.transform.localPosition = Vector3.zero;
-        col.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        col.GetComponent<Rigidbody2D>().simulated = false;
     }
 
     public void Crunch()
@@ -26,7 +26,7 @@ public class EatingPart : MonoBehaviour
     {
         collider.enabled = false;
         if(crunchedObject == default) return;
-        crunchedObject.GetComponent<PlayerMarble>().Initialize();
+        crunchedObject.GetComponent<PlayerMarble>().Reset();
         crunchedObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         crunchedObject.transform.localScale = Vector3.one * 0.5f;
         crunchedObject = default;
