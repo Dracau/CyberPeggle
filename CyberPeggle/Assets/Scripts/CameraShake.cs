@@ -49,8 +49,8 @@ public class CameraShake : MonoBehaviour
 [Serializable]
 public class ScreenShakeParameters
 {
-    public float intensity = 1.6f;
-    public float duration = 0.65f;
+    public float intensity = 0.9f;
+    public float duration = 0.5f;
     // intensity to lose after 1 sec
     [Range(0, 5)] public float decreaseFactor = 0.09f;
 }
