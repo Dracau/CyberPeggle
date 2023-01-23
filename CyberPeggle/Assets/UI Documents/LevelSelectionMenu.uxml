@@ -4,9 +4,18 @@
         <ui:VisualElement name="Background" style="width: 100%; height: 100%; position: absolute; background-color: rgb(118, 118, 118);" />
         <ui:Label text="CyberPeggle" display-tooltip-when-elided="true" name="Title" style="justify-content: center; align-items: center; -unity-text-align: upper-center; font-size: 120%; margin-bottom: 80px;" />
         <ui:VisualElement name="ButtonsRoot" style="width: 100%; height: 40%; align-items: center; justify-content: center; flex-direction: row; flex-wrap: nowrap; border-bottom-width: 100px; flex-shrink: 0; flex-grow: 0;">
-            <ui:Button text="Level 1" display-tooltip-when-elided="true" name="Level1Button" class="levelButton" />
-            <ui:Button text="Level 2" display-tooltip-when-elided="true" name="Level2Button" class="levelButton" />
-            <ui:Button text="Level 3" display-tooltip-when-elided="true" name="Level3Button" class="levelButton" />
+            <ui:VisualElement name="Level1" style="align-items: center;">
+                <ui:Button text="Level 1" display-tooltip-when-elided="true" name="Level1Button" class="levelButton" />
+                <ui:Button display-tooltip-when-elided="true" name="Level1StoryButton" style="width: 46px; height: 56px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Level2" style="align-items: center;">
+                <ui:Button text="Level 2" display-tooltip-when-elided="true" name="Level2Button" class="levelButton" />
+                <ui:Button display-tooltip-when-elided="true" name="Level2StoryButton" style="width: 46px; height: 56px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Level3" style="align-items: center;">
+                <ui:Button text="Level 3" display-tooltip-when-elided="true" name="Level3Button" class="levelButton" />
+                <ui:Button display-tooltip-when-elided="true" name="Level3StoryButton" style="width: 46px; height: 56px;" />
+            </ui:VisualElement>
         </ui:VisualElement>
         <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" class="defaultButton" />
     </ui:VisualElement>

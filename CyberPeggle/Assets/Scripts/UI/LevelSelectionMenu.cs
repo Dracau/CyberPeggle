@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectionMenu : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class LevelSelectionMenu : MonoBehaviour
         VisualElement buttonsRoot = document.rootVisualElement.Q<VisualElement>("ButtonsRoot");
         for (int i = 0; i < buttonsRoot.hierarchy.childCount; i++)
         {
-            Button levelButton = (Button)buttonsRoot.hierarchy.ElementAt(i);
+            Button levelButton = (Button)buttonsRoot.hierarchy.ElementAt(i).ElementAt(0);
             int levelIndex = i + 1;
             levelButton.clicked += () => OnLevelButtonClicked(levelIndex);
         }
@@ -28,7 +29,8 @@ public class LevelSelectionMenu : MonoBehaviour
     private void OnLevelButtonClicked(int levelIndex)
     {
         // Load level
-        print("Load level" + levelIndex);
+        GameManager.Instance.LevelIndex = levelIndex;
+        SceneManager.LoadScene("Levels");
     }
 
     private void OnQuitButtonClicked()
