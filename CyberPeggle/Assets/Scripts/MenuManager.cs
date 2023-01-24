@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public static MenuManager instance;
     [SerializeField] private UIDocument uiDocument;
     //[SerializeField] private GameObject menu;
-    [Dracau.ReadOnly] public bool paused;
+    public bool paused;
 
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;

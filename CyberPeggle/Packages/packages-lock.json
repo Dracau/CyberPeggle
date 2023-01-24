@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.dracau.tools": {
-      "version": "https://github.com/Dracau/Dracau-s-Tools.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "b19c7b00134e612188c7aeb1f2dcaf3817651201"
-    },
     "com.unity.2d.animation": {
       "version": "7.0.7",
       "depth": 1,
