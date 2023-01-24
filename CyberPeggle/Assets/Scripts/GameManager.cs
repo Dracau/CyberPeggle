@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
     [HideInInspector] public LevelManager LevelManager = null;
+    public int LevelIndex = 1;
     
     private void Awake()
     {
@@ -25,13 +26,20 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
-        print("victory");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        MenuManager.instance.VictoryPanel.SetActive(true);
+        StartCoroutine(ReloadScene());
     }
 
     public void Defeat()
     {
-        print("defeat");
+        MenuManager.instance.DefeatPanel.SetActive(true);
+        StartCoroutine(ReloadScene());
+    }
+
+    private IEnumerator ReloadScene()
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1.2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

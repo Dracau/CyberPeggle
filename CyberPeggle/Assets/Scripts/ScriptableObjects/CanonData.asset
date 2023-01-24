@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b057f07688dac42923f5a160ba350e, type: 3}
   m_Name: CanonData
   m_EditorClassIdentifier: 
-  PropulsionStrength: 5
+  PropulsionStrength: 5.5
   MaxAngle: 85

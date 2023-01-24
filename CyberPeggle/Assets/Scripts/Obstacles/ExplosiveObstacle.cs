@@ -16,9 +16,11 @@ public class ExplosiveObstacle : Obstacle
     private IEnumerator ExplosionCoroutine()
     {
         explosionTrigger.enabled = true;
+        GameManager.Instance.LevelManager.CameraShake.ScreenShake();
         yield return new WaitForSeconds(0.1f);
         foreach (Obstacle obstacle in obstaclesInRange)
         {
+            if (obstacle == null) continue;
             obstacle.Hit();
         }
         obstaclesInRange.Clear();

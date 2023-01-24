@@ -13,6 +13,9 @@ public class MenuManager : MonoBehaviour
     //[SerializeField] private GameObject menu;
     public bool paused;
 
+    [field : SerializeField] public GameObject DefeatPanel { get; private set; } = null;
+    [field : SerializeField] public GameObject VictoryPanel { get; private set; } = null;
+
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;
 

@@ -49,7 +49,8 @@ public class Canon : MonoBehaviour
         PlayerMarble player = GameManager.Instance.LevelManager.Player;
         if (player.IsInsideCanon == true)
         {
-            Vector2 force = GetMouseDirection() * canonData.PropulsionStrength;
+            Vector2 direction = MarblePosition.transform.position - transform.position;
+            Vector2 force = direction.normalized * canonData.PropulsionStrength;
             player.Launch(force);
         }
     }
