@@ -6,6 +6,7 @@ using UnityEngine;
 public class ExplosiveObstacle : Obstacle
 {
     [field: SerializeField] private CircleCollider2D explosionTrigger;
+    [SerializeField] private ParticleSystem explosionParticles;
     public float explosionForce;
     public override void Hit()
     {
@@ -17,6 +18,7 @@ public class ExplosiveObstacle : Obstacle
     {
         explosionTrigger.enabled = true;
         GameManager.Instance.LevelManager.CameraShake.ScreenShake();
+        explosionParticles.Play();
         yield return new WaitForSeconds(0.1f);
         foreach (Obstacle obstacle in obstaclesInRange)
         {
