@@ -24,7 +24,10 @@ public class VictoryScreen : MonoBehaviour
 
     private void NextLevel()
     {
-        GameManager.Instance.LevelIndex++;
+        if (GameManager.Instance.LevelIndex < 3)
+        {
+            GameManager.Instance.LevelIndex++;
+        }
         Replay();
     }
 
