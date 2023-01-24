@@ -1,12 +1,19 @@
 .defaultButton {
-    width: 16%;
-    height: 8%;
+    width: 332px;
+    height: 65px;
     -unity-text-align: middle-center;
-    font-size: 49px;
+    font-size: 45px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
-.defaultButton:hover{
-
+.defaultButton:hover {
+    transition-property: font-size;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    font-size: 50px;
 }
 
 .levelButton {
@@ -23,6 +30,5 @@
     -unity-text-align: middle-center;
 }
 
-.levelButton:hover{
-    
+.levelButton:hover {
 }

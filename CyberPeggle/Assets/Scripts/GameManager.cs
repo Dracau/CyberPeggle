@@ -26,20 +26,11 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
-        MenuManager.instance.VictoryPanel.SetActive(true);
-        StartCoroutine(ReloadScene());
+        MenuManager.instance.OpenVictoryScreen();
     }
 
     public void Defeat()
     {
-        MenuManager.instance.DefeatPanel.SetActive(true);
-        StartCoroutine(ReloadScene());
-    }
-
-    private IEnumerator ReloadScene()
-    {
-        Time.timeScale = 0;
-        yield return new WaitForSecondsRealtime(1.2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        MenuManager.instance.OpenDefeatScreen();
     }
 }
