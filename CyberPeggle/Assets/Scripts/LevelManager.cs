@@ -13,9 +13,12 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < levelsParent.childCount; i++)
+        if (levelsParent != null)
         {
-            levelsParent.GetChild(i).gameObject.SetActive(false);
+            for (int i = 0; i < levelsParent.childCount; i++)
+            {
+                levelsParent.GetChild(i).gameObject.SetActive(false);
+            }
         }
 
         PickableMarble.PickableMarbles = new List<PickableMarble>();
@@ -32,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
     private void LoadLevel(int index)
     {
-        if (levelsParent.childCount < index) return;
+        if (levelsParent == null || levelsParent.childCount < index) return;
         levelsParent.GetChild(index - 1).gameObject.SetActive(true);
     }
 }
