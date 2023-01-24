@@ -1,6 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "com.elringus.spriteglow": {
       "version": "https://github.com/Elringus/SpriteGlow.git#package",
       "depth": 0,
@@ -8,8 +7,6 @@
       "dependencies": {},
       "hash": "05442994ffb7f6c679f648d702cdf888bd8c01dc"
     },
-=======
->>>>>>> Gautier
     "com.unity.2d.animation": {
       "version": "7.0.7",
       "depth": 1,
