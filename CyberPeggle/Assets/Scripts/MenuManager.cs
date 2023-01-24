@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
-    [SerializeField] private UIDocument uiDocument;
-    //[SerializeField] private GameObject menu;
-    public bool paused;
+    [SerializeField] private UIDocument pauseMenu;
+    [HideInInspector] public bool paused;
 
-    [field : SerializeField] public GameObject DefeatPanel { get; private set; } = null;
-    [field : SerializeField] public GameObject VictoryPanel { get; private set; } = null;
+    [SerializeField] private VictoryScreen victoryScreen = null;
+    [SerializeField] private DefeatScreen defeatScreen = null;
 
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;
@@ -22,15 +22,15 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        resumeButton = uiDocument.rootVisualElement.Q<Button>("ResumeButton");
-        quitButton = uiDocument.rootVisualElement.Q<Button>("QuitButton");
-        volumeSlider = uiDocument.rootVisualElement.Q<Slider>("VolumeSlider");
+        resumeButton = pauseMenu.rootVisualElement.Q<Button>("ResumeButton");
+        quitButton = pauseMenu.rootVisualElement.Q<Button>("QuitButton");
+        volumeSlider = pauseMenu.rootVisualElement.Q<Slider>("VolumeSlider");
         
         resumeButton.clicked += TogglePause;
         quitButton.clicked += Quit;
         volumeSlider.RegisterCallback<ChangeEvent<float>>(UpdateVolume);
         
-        uiDocument.rootVisualElement.style.display = DisplayStyle.None;
+        pauseMenu.rootVisualElement.style.display = DisplayStyle.None;
     }
 
     public void ReadPauseInput(InputAction.CallbackContext context)
@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
         Debug.Log(0);
         paused = !paused;
         Time.timeScale = paused ? 0 : 1;
-        uiDocument.rootVisualElement.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
+        pauseMenu.rootVisualElement.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
     }
 
     public void UpdateVolume(ChangeEvent<float> evt)
@@ -57,5 +57,17 @@ public class MenuManager : MonoBehaviour
         Debug.Log(1);
         // A remplacer par le retour à la world map
         Application.Quit();
+    }
+
+    public void OpenDefeatScreen()
+    {
+        Time.timeScale = 0;
+        defeatScreen.gameObject.SetActive(true);
+    }
+
+    public void OpenVictoryScreen()
+    {
+        Time.timeScale = 0;
+        victoryScreen.gameObject.SetActive(true);
     }
 }
