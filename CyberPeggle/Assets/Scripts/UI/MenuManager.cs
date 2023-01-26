@@ -1,11 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -54,9 +50,7 @@ public class MenuManager : MonoBehaviour
 
     public void Quit()
     {
-        Debug.Log(1);
-        // A remplacer par le retour à la world map
-        Application.Quit();
+        SceneManager.LoadScene("LevelSelectionMenu");
     }
 
     public void OpenDefeatScreen()
