@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using System;
 
 public class MenuManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MenuManager : MonoBehaviour
 
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;
+    private DropdownField resolutionDropdown;
 
     private void Awake()
     {
@@ -21,12 +23,30 @@ public class MenuManager : MonoBehaviour
         resumeButton = pauseMenu.rootVisualElement.Q<Button>("ResumeButton");
         quitButton = pauseMenu.rootVisualElement.Q<Button>("QuitButton");
         volumeSlider = pauseMenu.rootVisualElement.Q<Slider>("VolumeSlider");
-        
+        resolutionDropdown = pauseMenu.rootVisualElement.Q<DropdownField>("ResolutionDropdown");
+
         resumeButton.clicked += TogglePause;
         quitButton.clicked += Quit;
         volumeSlider.RegisterCallback<ChangeEvent<float>>(UpdateVolume);
+        resolutionDropdown.RegisterValueChangedCallback(ChangeResolution);
         
         pauseMenu.rootVisualElement.style.display = DisplayStyle.None;
+    }
+
+    private void ChangeResolution(ChangeEvent<string> evt)
+    {
+        switch (evt.newValue)
+        {
+            case "1920x1080":
+                Screen.SetResolution(1920, 1080, true);
+                break;
+            case "1280x720":
+                Screen.SetResolution(1280, 720, false);
+                break;
+            case "854x480":
+                Screen.SetResolution(854, 480, false);
+                break;
+        }
     }
 
     public void ReadPauseInput(InputAction.CallbackContext context)
