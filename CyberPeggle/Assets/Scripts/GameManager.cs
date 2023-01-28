@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
     [HideInInspector] public LevelManager LevelManager = null;
     public int LevelIndex = 1;
+    public bool[] Collectibles = new bool[3];
     
     private void Awake()
     {

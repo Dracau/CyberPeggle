@@ -9,18 +9,30 @@ public class Collectible : MonoBehaviour
     [SerializeField] private AudioClip collectSound;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D collider;
+    [SerializeField] private Animator animator;
+
+    private void Awake()
+    {
+        if (GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1] == true)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.GetComponent<PlayerMarble>() == default) return;
         audioSource.PlayOneShot(collectSound);
+        GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1] = true;
+        Debug.Log(GameManager.Instance.LevelIndex - 1 + " : " + GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1]);
         StartCoroutine(DisableCoroutine());
     }
 
     IEnumerator DisableCoroutine()
     {
-        spriteRenderer.enabled = false;
+        animator.SetTrigger("Trigger");
         collider.enabled = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }

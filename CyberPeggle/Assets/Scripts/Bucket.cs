@@ -7,6 +7,7 @@ public class Bucket : MonoBehaviour
 {
     [SerializeField] private float maxDistance = 7f;
     [Range(0f, 1f)] [SerializeField] private float speed = 1f;
+    [SerializeField] private Animator animator = null;
 
     private Vector3 initialPosition;
 
@@ -19,5 +20,10 @@ public class Bucket : MonoBehaviour
     {
         // Movement
         transform.position = initialPosition + transform.right * Mathf.Sin(Time.time * speed) * maxDistance;
+    }
+
+    public void TriggerAnim()
+    {
+        animator.SetTrigger("Trigger");
     }
 }

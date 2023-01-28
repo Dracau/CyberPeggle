@@ -71,6 +71,7 @@ public class PlayerMarble : MonoBehaviour
         else if (col.gameObject.CompareTag("Bucket"))
         {
             EnterBucket();
+            col.transform.parent.parent.GetComponent<Bucket>().TriggerAnim();
         }
     }
 
