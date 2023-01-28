@@ -28,7 +28,6 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.LevelManager = this;
-        Canon.Initialize();
         Player.Initialize();
         LoadLevel(GameManager.Instance.LevelIndex);
     }
