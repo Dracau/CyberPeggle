@@ -24,7 +24,6 @@ public class Collectible : MonoBehaviour
         if (col.GetComponent<PlayerMarble>() == default) return;
         audioSource.PlayOneShot(collectSound);
         GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1] = true;
-        Debug.Log(GameManager.Instance.LevelIndex - 1 + " : " + GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1]);
         StartCoroutine(DisableCoroutine());
     }
 

@@ -9,6 +9,7 @@ public class PlayerMarble : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb = null;
+    [SerializeField] private TrailRenderer trail = null;
     // Placeholder
     [SerializeField] private TMP_Text lifeText = null;
     
@@ -29,6 +30,12 @@ public class PlayerMarble : MonoBehaviour
         transform.SetParent(GameManager.Instance.LevelManager.Canon.MarblePosition);
         transform.localPosition = Vector2.zero;
         IsInsideCanon = true;
+        ClearTrail();
+    }
+
+    public void ClearTrail()
+    {
+        trail.Clear();
     }
     
     public void Launch(Vector2 force)

@@ -14,5 +14,6 @@ public class Portal : MonoBehaviour
         if(!portalManager.TryWarp(other.gameObject)) return;
         
         other.transform.position = outputPosition.position;
+        other.GetComponent<PlayerMarble>().ClearTrail();
     }
 }
