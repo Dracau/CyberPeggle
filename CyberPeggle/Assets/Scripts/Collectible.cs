@@ -5,14 +5,26 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip collectSound;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D collider;
     [SerializeField] private Animator animator;
 
-    private void Awake()
+    private void Start()
     {
+        int collectibles = 0;
+        foreach (bool collectible in GameManager.Instance.Collectibles)
+        {
+            if (collectible == true)
+            {
+                collectibles++;
+            }
+        }
+
+        MenuManager.instance.hud.UpdateCollectibles(collectibles);
+
         if (GameManager.Instance.Collectibles[GameManager.Instance.LevelIndex - 1] == true)
         {
             Destroy(gameObject);

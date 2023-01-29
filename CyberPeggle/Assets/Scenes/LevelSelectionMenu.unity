@@ -159,8 +159,8 @@ Camera:
   m_GameObject: {fileID: 251796379}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -255,6 +255,41 @@ PrefabInstance:
     - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
       propertyPath: <Player>k__BackingField
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: storyLine.Array.data[0]
+      value: 'I''m Ava, a professional hacker. Today''s the day I infiltrate the
+        most secure server complex in the world. I have a new client who wants me
+        to extract some valuable information. I''m disguised as a maintenance worker,
+        and I''ve got my gear ready.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: storyLine.Array.data[1]
+      value: I'm running through the server room, dodging drones and turrets left
+        and right. My years of experience as a hacker come in handy, but the security
+        system is relentless. I need to find a way out of this complex soon, or I'll
+        be trapped in here forever.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: storyLine.Array.data[2]
+      value: 'I finally found what I was looking for: a control room with a single
+        server that controls the entire security system. It''s my ticket to freedom.
+        I worked fast, using all of my hacking skills to shut down the system. The
+        guards are trying to stop me, but I''m too quick for them.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: Collectibles.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: Collectibles.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283503581724270298, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
+      propertyPath: Collectibles.Array.data[2]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1283503581724270299, guid: b7fa1c09e5099a347a5cc22abfda4119, type: 3}
       propertyPath: m_Name

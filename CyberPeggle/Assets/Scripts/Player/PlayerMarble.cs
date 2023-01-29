@@ -26,6 +26,8 @@ public class PlayerMarble : MonoBehaviour
         rb.simulated = false;
         rb.velocity = Vector2.zero;
         transform.SetParent(GameManager.Instance.LevelManager.Canon.MarblePosition);
+        transform.localScale = Vector3.one;
+
         transform.localPosition = Vector2.zero;
         IsInsideCanon = true;
         ClearTrail();

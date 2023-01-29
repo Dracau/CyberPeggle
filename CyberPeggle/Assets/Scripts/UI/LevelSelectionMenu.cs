@@ -24,6 +24,46 @@ public class LevelSelectionMenu : MonoBehaviour
             levelButton.clicked += () => OnLevelButtonClicked(levelIndex);
         }
         quitButton.clicked += OnQuitButtonClicked;
+
+        //Story Button
+        for(int i = 0; i < buttonsRoot.hierarchy.childCount; i++)
+        {
+
+            Button chipButton = (Button)buttonsRoot.hierarchy.ElementAt(i).ElementAt(1);
+
+            Debug.Log($"Added chip n° {i} : {chipButton}");
+
+            int chipIndex = i;
+            chipButton.clicked += () => OnChipButtonClicked(chipIndex);
+        }
+
+        storyTextField = document.rootVisualElement.Q<Label>("StoryField");
+        storyBlock = document.rootVisualElement.Query<VisualElement>("StoryBlockParent");
+
+        Button storyBackButton = document.rootVisualElement.Query<Button>("StoryBackButton");
+        storyBackButton.clicked += () => HideStoryBlock();
+    }
+
+    private VisualElement storyBlock;
+    private Label storyTextField;
+
+    private void OnChipButtonClicked(int i)
+    {
+        print("Je passe ici");
+
+        if (GameManager.Instance.Collectibles[i])
+        {
+            if (GameManager.Instance.resolution == 1) storyTextField.style.fontSize = 8;
+            storyTextField.text = GameManager.Instance.storyLine[i];
+
+
+            storyBlock.visible = true;
+        }
+    }
+
+    private void HideStoryBlock()
+    {
+        storyBlock.visible = false;
     }
 
     private void OnLevelButtonClicked(int levelIndex)

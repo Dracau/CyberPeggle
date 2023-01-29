@@ -40,12 +40,15 @@ public class MenuManager : MonoBehaviour
         {
             case "1920x1080":
                 Screen.SetResolution(1920, 1080, true);
+                GameManager.Instance.resolution = 3;
                 break;
             case "1280x720":
                 Screen.SetResolution(1280, 720, false);
+                GameManager.Instance.resolution = 2;
                 break;
             case "854x480":
                 Screen.SetResolution(854, 480, false);
+                GameManager.Instance.resolution = 1;
                 break;
         }
     }

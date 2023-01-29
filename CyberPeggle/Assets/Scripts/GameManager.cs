@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public LevelManager LevelManager = null;
     public int LevelIndex = 1;
     public bool[] Collectibles = new bool[3];
+
+    public int resolution = 1;
+
+    [TextArea]
+    public string[] storyLine = new string[3];
     
     private void Awake()
     {
