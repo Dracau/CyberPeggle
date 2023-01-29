@@ -12,14 +12,10 @@ public class Canon : MonoBehaviour
     [SerializeField] private PlayerInput input = null;
     private Vector2 relativePosition;
 
-    public void Initialize()
-    {
-        relativePosition = Camera.main!.WorldToScreenPoint(transform.position);
-    }
-
     private void Update()
     {
         Aim();
+        relativePosition = Camera.main!.WorldToScreenPoint(transform.position);
     }
 
     private void Aim()

@@ -9,8 +9,7 @@ public class PlayerMarble : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb = null;
-    // Placeholder
-    [SerializeField] private TMP_Text lifeText = null;
+    [SerializeField] private TrailRenderer trail = null;
     
     [HideInInspector] public bool IsInsideCanon = false;
     private int currentLife;
@@ -18,7 +17,7 @@ public class PlayerMarble : MonoBehaviour
     public void Initialize()
     {
         currentLife = GameManager.Instance.LevelManager.LevelData.MaxLife;
-        lifeText.text = currentLife.ToString();
+        MenuManager.instance.hud.UpdatePlayerLives(currentLife);
         Reset();
     }
 
@@ -29,6 +28,12 @@ public class PlayerMarble : MonoBehaviour
         transform.SetParent(GameManager.Instance.LevelManager.Canon.MarblePosition);
         transform.localPosition = Vector2.zero;
         IsInsideCanon = true;
+        ClearTrail();
+    }
+
+    public void ClearTrail()
+    {
+        trail.Clear();
     }
     
     public void Launch(Vector2 force)
@@ -43,8 +48,7 @@ public class PlayerMarble : MonoBehaviour
     private void AddLife(int addedLife)
     {
         currentLife += addedLife;
-        // Placeholder
-        lifeText.text = currentLife.ToString();
+        MenuManager.instance.hud.UpdatePlayerLives(currentLife);
     }
 
     private void HitGround()
@@ -71,6 +75,7 @@ public class PlayerMarble : MonoBehaviour
         else if (col.gameObject.CompareTag("Bucket"))
         {
             EnterBucket();
+            col.transform.parent.parent.GetComponent<Bucket>().TriggerAnim();
         }
     }
 

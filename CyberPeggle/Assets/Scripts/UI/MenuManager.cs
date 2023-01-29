@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private VictoryScreen victoryScreen = null;
     [SerializeField] private DefeatScreen defeatScreen = null;
+    public HUD hud = null;
 
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;
@@ -56,7 +57,6 @@ public class MenuManager : MonoBehaviour
     }
     private void TogglePause()
     {
-        Debug.Log(0);
         paused = !paused;
         Time.timeScale = paused ? 0 : 1;
         pauseMenu.rootVisualElement.style.display = paused ? DisplayStyle.Flex : DisplayStyle.None;
@@ -65,7 +65,6 @@ public class MenuManager : MonoBehaviour
     public void UpdateVolume(ChangeEvent<float> evt)
     {
         AudioListener.volume = evt.newValue;
-        Debug.Log("Volume: " + evt.newValue);
     }
 
     public void Quit()

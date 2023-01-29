@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7920841564547308639}
   - component: {fileID: 2725178836939312497}
   - component: {fileID: -8258289244387613017}
+  - component: {fileID: 1688799216562026156}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   collectSound: {fileID: 8300000, guid: 5e6c6b70966c6ef478a6f8f5428d55eb, type: 3}
   spriteRenderer: {fileID: 8069027616098644}
   collider: {fileID: 7920841564547308639}
+  animator: {fileID: 1688799216562026156}
 --- !u!82 &-8258289244387613017
 AudioSource:
   m_ObjectHideFlags: 0
@@ -225,3 +227,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1688799216562026156
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192330809550904861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cebdc972297a28f41bcef09df81d2f20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
