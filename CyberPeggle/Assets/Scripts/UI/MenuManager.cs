@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private VictoryScreen victoryScreen = null;
     [SerializeField] private DefeatScreen defeatScreen = null;
+    public HUD hud = null;
 
     private Button resumeButton, quitButton;
     private VisualElement volumeSlider;

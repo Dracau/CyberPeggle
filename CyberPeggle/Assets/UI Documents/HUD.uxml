@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="root" style="width: 100%; height: 100%; flex-direction: row;">
+        <ui:VisualElement name="playerInfos" style="flex-direction: row; width: 23%; height: 20%; justify-content: flex-end; left: 276px; position: absolute;">
+            <ui:VisualElement name="infos" style="flex-grow: 1; align-items: flex-end;">
+                <ui:VisualElement name="playerLivesBackground" style="align-items: auto; background-image: resource(&apos;pro/actionTreeBackground&apos;); background-color: rgb(255, 255, 255); width: 66%; height: 34%; top: 4%; flex-direction: row; justify-content: center;">
+                    <ui:VisualElement name="playerMarbleImage" style="background-image: url(&apos;project://database/Assets/Assets/Images/Billes.png?fileID=-1452015554&amp;guid=9dc47ee74b6efe446a77834c82222347&amp;type=3#Billes_1&apos;); width: 42%; height: 98%; -unity-background-scale-mode: stretch-to-fill;" />
+                    <ui:Label text="5" display-tooltip-when-elided="true" name="playerLivesText" style="width: 23%; height: 94%; -unity-text-align: middle-center; font-size: 34px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="marblesTakenBackground" style="align-items: auto; background-image: resource(&apos;pro/actionTreeBackground&apos;); background-color: rgb(255, 255, 255); width: 64%; height: 34%; top: 18px; flex-direction: row; justify-content: center;">
+                    <ui:VisualElement name="pickableMarbleImage" style="background-image: url(&apos;project://database/Assets/Assets/Images/Billes.png?fileID=1963633929&amp;guid=9dc47ee74b6efe446a77834c82222347&amp;type=3#Billes_2&apos;); width: 42%; height: 98%; -unity-background-scale-mode: stretch-to-fill;" />
+                    <ui:Label text="0/5" display-tooltip-when-elided="true" name="marblesTakenText" style="width: 41%; height: 97%; -unity-text-align: middle-center; font-size: 30px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="characterImage" style="align-items: auto; background-image: none; background-color: rgb(255, 255, 255); width: 40%; height: 79%; top: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="collectiblesInfos" style="height: 8%; width: 15%; position: absolute; flex-direction: row; left: 1%; top: 2%;">
+            <ui:VisualElement name="collectibleImage" style="height: 78%; width: 23%; background-image: url(&apos;project://database/Assets/Assets/Images/Billes.png?fileID=1963633929&amp;guid=9dc47ee74b6efe446a77834c82222347&amp;type=3#Billes_2&apos;);" />
+            <ui:Label text="0/3" display-tooltip-when-elided="true" name="collectiblesNumberText" style="height: 60px; width: 128px; -unity-text-align: middle-left; font-size: 29px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -10,8 +10,6 @@ public class PlayerMarble : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody2D rb = null;
     [SerializeField] private TrailRenderer trail = null;
-    // Placeholder
-    [SerializeField] private TMP_Text lifeText = null;
     
     [HideInInspector] public bool IsInsideCanon = false;
     private int currentLife;
@@ -19,7 +17,7 @@ public class PlayerMarble : MonoBehaviour
     public void Initialize()
     {
         currentLife = GameManager.Instance.LevelManager.LevelData.MaxLife;
-        lifeText.text = currentLife.ToString();
+        MenuManager.instance.hud.UpdatePlayerLives(currentLife);
         Reset();
     }
 
@@ -50,8 +48,7 @@ public class PlayerMarble : MonoBehaviour
     private void AddLife(int addedLife)
     {
         currentLife += addedLife;
-        // Placeholder
-        lifeText.text = currentLife.ToString();
+        MenuManager.instance.hud.UpdatePlayerLives(currentLife);
     }
 
     private void HitGround()
