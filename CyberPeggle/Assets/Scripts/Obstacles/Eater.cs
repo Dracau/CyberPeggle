@@ -10,6 +10,5 @@ public class Eater : MonoBehaviour
     {
         if(col.GetComponent<PlayerMarble>() == default) return;
         anim.Play();
-        Debug.Log("Detected Player");
     }
 }
